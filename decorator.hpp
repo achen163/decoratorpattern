@@ -10,4 +10,5 @@ class Decorator : public Base {
 		Decorator() { }	
 		virtual double evaluate() = 0;
 		virtual string stringify() = 0;	
+};
 #endif
