@@ -4,6 +4,7 @@
 #include "decorator.hpp"
 
 class Floor : public Decorator {
+	Floor (Base* value) : Decorator () { this->value = value;}	
 	virtual double  evaluate() {
 		return floor(value->evaluate());
 

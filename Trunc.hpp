@@ -4,9 +4,11 @@
 #include "decorator.hpp" 
 class Trunc : public Decorator{
 	public:
+		Trunc(Base* value) : Decorator() { this->value = value; }
+		
 		virtual string stringify(){
 			int num = trunc(value->evaluate());
-			return num.to_string();
+			return to_string(num);
 			
 
 		}	
@@ -18,3 +20,4 @@ class Trunc : public Decorator{
 
 
 };
+#endif
