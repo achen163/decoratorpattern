@@ -4,7 +4,7 @@
 
 class Abs : public Decorator {
 	public:
-		Abs(Base* value) : Decorator() { this->value; }
+		Abs(Base* value) : Decorator() { this->value = value; }
 	 	virtual double evaluate() { abs(value->evaluate()); }
 	private:
 		Base* value;

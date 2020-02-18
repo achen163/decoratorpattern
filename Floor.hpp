@@ -13,7 +13,7 @@ protected:
 	Base* value;
 	
 
-}
+};
 
 
 #endif
