@@ -5,10 +5,11 @@
 
 class Ceil : public Decorator {
 	public:
-		Ceil(Base* value) : Decorator() { this->value = value; }
+		Ceil(Base* value) : Decorator() { this->value = value;  }
 		virtual double  evaluate() {
 			return ceil(value->evaluate());
-		}
+		}	
+		virtual string stringify() { }
 	private:
 		Base* value;
 };
