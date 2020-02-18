@@ -9,6 +9,7 @@ class Floor : public Decorator {
 		return floor(value->evaluate());
 
 	}
+	virtual string stringify() {};
 
 protected:
 	Base* value;
