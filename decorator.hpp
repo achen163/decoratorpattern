@@ -3,13 +3,11 @@
 #include "base.hpp"
 #include <math.h>
 #include <iostream>
-
-using namespace stdl;
+#include <string>
+using namespace std;
 class Decorator : public Base {
 	public:
-		Decorator(Decorator* decorator) { this->decorator = decorator; }	
-		virtual int evaluate() = 0;
-		virtual string stringify() = 0;
-	private:
-		Decorator* decorator;	
+		Decorator() { }	
+		virtual double evaluate() = 0;
+		virtual string stringify() = 0;	
 #endif
