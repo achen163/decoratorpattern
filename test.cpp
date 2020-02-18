@@ -57,3 +57,12 @@ TEST(DecoratorTest, ParenTest) {
 	EXPECT_EQ(paren->stringify(), "(6.000000+4.000000)");
 }
 
+TEST(DecoratorTest, AbsandFloorTest) {
+	Base* negTwo2 = new Op(-2.5);
+        Base* posThree2  = new Op(3);
+        Base* mult42 = new  Mult(negTwo2, posThree2);
+        Decorator* abs2 = new Abs(mult42);
+        EXPECT_EQ(abs2->evaluate(), 7.5);
+        Decorator* floor2  = new Floor(abs2);
+        EXPECT_EQ(floor2->evaluate(), 7.0);
+}
