@@ -4,14 +4,14 @@
 #include "decorator.hpp"
 
 class Floor : public Decorator {
-	Floor (Base* value) : Decorator () { this->value = value;}	
-	virtual double  evaluate() {
-		return floor(value->evaluate());
+	public:
+		Floor (Base* value) : Decorator () { this->value = value;}	
+		virtual double  evaluate() {
+			return floor(value->evaluate());
 
-	}
-	virtual string stringify() {};
-
-protected:
+		}
+		virtual string stringify() { };
+private:
 	Base* value;
 	
 

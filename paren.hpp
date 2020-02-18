@@ -5,7 +5,7 @@
 class Paren : public Decorator {
 	public:
 		Paren(Base* value) : Decorator() { this->value = value; }
-		virtual string stringify() { paren(value->stringify()); }
+		virtual string stringify() { return "(" + value->stringify() + ")"; }
 		virtual double evaluate() { }
 	private:
 		Base* value;
